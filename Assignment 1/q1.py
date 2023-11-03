@@ -20,31 +20,11 @@ def power_divide_and_conquer(base, exponent):
     else:
         half_pow = power_divide_and_conquer(base, (exponent - 1) // 2)
         return half_pow * half_pow * base
-    
-    
-    
-# q1. part b
-
-# Naïve Iterative Approach:
-
-# In the naïve iterative approach, 
-# we have a loop that runs exponent times. 
-# So, the time complexity is O(exponent), 
-# which is linear in terms of the exponent.
-
-# Divide-and-Conquer Approach:
-
-# In the divide-and-conquer approach, 
-# we are effectively halving the problem at each step. 
-# So, the number of operations required to compute 
-# the power of a number is logarithmic in terms of the exponent. 
-# The time complexity is O(log exponent).
-
-
 
 # q1. part c
 
-exponents = [5, 10, 100, 200, 500, 1000]
+# exponents = [1, 10, 100, 1000, 10000, 1000000] # can't run 10^6 because it takes a long time
+exponents = [1, 10, 100, 1000, 10000]
 iterative_times = []
 divide_conquer_times = []
 
@@ -64,8 +44,3 @@ plt.xlabel("Exponent")
 plt.ylabel("Execution Time (s)")
 plt.legend()
 plt.show()
-
-# q1. part d
-
-# The divide-and-conquer approach is indeed more efficient for large exponents, 
-# as it grows at a logarithmic rate compared to the linear growth of the iterative approach. 

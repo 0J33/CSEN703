@@ -62,27 +62,11 @@ target_sum = 10
 result = find_pairs_with_sum(arr, target_sum)
 print(result)
 
-
-
-# q2. part b
-
-# Merge Sort: The sorting part of the algorithm, 
-# which sorts the input array, has a time complexity of O(n log n). 
-# This is the dominating factor in the time complexity analysis.
-
-# Binary Search: The binary search part to find pairs with the target sum is linear, 
-# as we iterate through the array once. This has a time complexity of O(n).
-
-# The overall time complexity of the algorithm is determined by the dominant factor, 
-# which is the sorting step, i.e., O(n log n). 
-# So, the algorithm's overall time complexity is O(n log n).
-
-
-
 # q2. part c
 
 # Experiment with different input sizes (n)
-input_sizes = [5, 10, 100, 200, 500, 1000]
+# input_sizes = [1, 10, 100, 1000, 10000, 1000000] # can't run 10^6 because it takes a long time
+input_sizes = [1, 10, 100, 1000, 10000]
 execution_times = []
 
 for size in input_sizes:
